@@ -1,1 +1,0 @@
-# javascript-jQuery_sketch
