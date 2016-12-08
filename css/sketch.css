@@ -1,6 +1,6 @@
 #container {
-	border: 1px solid black;
 	margin: 0 auto;
+	border: 0;
     padding: 0;
 	font-size: 0;
 	height: 800px;
@@ -8,12 +8,12 @@
 }
 
 .square {
-	border: none;
-	background-color: #0F380F;
 	margin: 0;
+	border: none;
 	padding: 0;
 	height:50px;
 	width:50px;
+	background-color: #0F380F;
 	display: inline-block;
 	opacity: .10;
 }

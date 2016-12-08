@@ -14,8 +14,8 @@ $('button').on('click', function(){
 
 			createGrid(numSquaresSide);
 			$('.square').css({'height': sizeSquare + 'px', 'width': sizeSquare + 'px'});
-		} else {
 
+		} else {
 			alert("Your selection must be greater than 1 and less than 101! Give it another whirl!");
 		}
 	}
@@ -36,8 +36,8 @@ function colorChange(){
 }
 
 
-function createGrid(squareMeas){
-	var totalSquares = squareMeas * squareMeas; 
+function createGrid(numSquaresSide){
+	var totalSquares = numSquaresSide * numSquaresSide; 
 	$('#container').empty();
 	for (var i = 1; i <= totalSquares; i++){
 		$('#container').append('<div class="square"></div>');
