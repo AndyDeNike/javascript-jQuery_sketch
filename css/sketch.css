@@ -1,10 +1,32 @@
-#container {
+@font-face {
+	font-family: gameboy;
+	src:url("gameboy.ttf");
+}
+
+#titleSketch {
+	font-family: gameboy;
+	font-size: 20px;
+	color: #9BBC0F;
+	display: inline-block;
+	
+}
+
+#reset_grid{
+	position: absolute;
+	margin: 4px 0px 0px 0px;
+	display: inline-block;
+}
+
+#container{
 	margin: 0 auto;
 	border: 1px solid black;
     padding: 0;
 	font-size: 0;
 	height: 800px;
 	width: 800px;
+    
+
+	
 }
 
 .square {
@@ -17,3 +39,4 @@
 	display: inline-block;
 	opacity: .10;
 }
+
