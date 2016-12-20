@@ -4,9 +4,9 @@ createGrid(16);		//calls the createGrid function with a parameter of 16
 $('.square').hover(colorChange);	//when hovering on '.square' div, colorChange function is exectued 
 
 
-$('button').on('click', function(){		//when clicking on button the following function is exectued
+$('#reset_grid').on('click', function(){		//when clicking on #reset_grid button the following function is exectued
 	$('.square').css({'opacity': '.1'});	//targeting the '.square' object and converting all '.square' to specififed opacity 
-	var newNumSquareSide = prompt('How many squares per side would you like?', 16);		//storing prompted answer in var nSS
+	var newNumSquareSide = prompt('Choose a number to define the width/height of the sketch pad!', 16);		//storing prompted answer in var nSS
 																						//this will be used to represent squares per side 
 	if(newNumSquareSide != null){
 		if(newNumSquareSide > 1 && newNumSquareSide <=100){
@@ -24,6 +24,21 @@ $('button').on('click', function(){		//when clicking on button the following fun
 	$('.square').hover(colorChange);	//this line is reintroduced allowing for hovor color function for '.square' divs 
 
 });
+
+
+
+$('#color').on('click', function(){		//when clicking on #color button, function code is executed 
+	$('.square').hover(function(){		
+      var r = Math.floor(Math.random() * 255);	
+      var g = Math.floor(Math.random() * 255);
+      var b = Math.floor(Math.random() * 255);
+      var color = "rgb("+r+","+g+","+b+")"
+      $(this).css("background-color", color);
+  	})
+
+});
+
+
 
 
 
@@ -45,8 +60,6 @@ function createGrid(numSquareSide){
 	}															//until i<= totalSquares  
 
 }
-
-
 
 
 
